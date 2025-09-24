@@ -48,5 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    document.getElementsByClassName('btn')[0].addEventListener('click', () => {
+        grid = ["", "", "", "", "", "", "", "", ""];
+        currentPlayer = "X";
+        gameStatus = document.getElementById('status');
+        gameStatus.textContent = "Move your mouse over a square and click to play an X or an O.";
+        gameStatus.classList.remove('you-won');
+        for (let i = 0; i < squares.length; i++) {
+            squares[i].textContent = '';
+            squares[i].classList.remove('X', 'O');
+        }
+    });
+
 
 });
